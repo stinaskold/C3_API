@@ -4,6 +4,6 @@ SC.initialize({
 
 $(document).ready(function() {
     SC.get('/tracks/13158665', function(track) {
-        $('#player').html(track.title);
+        console.log(track.title);
     })
 });
