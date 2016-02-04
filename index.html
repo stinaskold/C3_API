@@ -7,7 +7,6 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,700italic,400italic,300italic,100italic,900,700,300,100' rel='stylesheet' type='text/css'>
 
         <script src="js/jquery-1.11.3.js"></script>
-        <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
         <script src="js/main.js"></script>
   </head>
 
@@ -17,8 +16,31 @@
 
     <main class="container row row-centered text-center">
 
+
+      <div class="grid-container centered">
+  <div class="grid-100">
+    <div class="contained">
+      <div class="grid-100">
+        <div class="heading">
+          <h1>Flickr Photo Search</h1>
+          <form>
+            <label for="search">Type a search term</label>
+            <input type="search" name="search" id="search">
+            <input type="submit" value="Search" id="submit">
+          </form>
+
+        </div>
+      </div>
+
+      <ul id="photos">
+
+      </ul>
+    </div>
+  </div>
+</div>
+
       <h3></h3>
-<div id="player"></div>
+      <div id="player"></div>
       <button id="start"></button>
 
     </main>
