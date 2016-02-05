@@ -1,49 +1,53 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Song</title>
+    <title>Photo Search</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,700italic,400italic,300italic,100italic,900,700,300,100' rel='stylesheet' type='text/css'>
 
-        <script src="js/jquery-1.11.3.js"></script>
-        <script src="js/main.js"></script>
   </head>
 
   <body>
 
-    <h1 class="text-center">Song</h1>
-
-    <main class="container row row-centered text-center">
 
 
-      <div class="grid-container centered">
-  <div class="grid-100">
-    <div class="contained">
-      <div class="grid-100">
-        <div class="heading">
-          <h1>Flickr Photo Search</h1>
-          <form>
-            <label for="search">Type a search term</label>
-            <input type="search" name="search" id="search">
-            <input type="submit" value="Search" id="submit">
-          </form>
+    <main class="container-fluid row row-centered text-center">
+
+      <h1>Photo search</h1>
+
+        <div class="container">
+
+          <div class="form-group">
+            <label for="keyword-search">Search by keyword</label>
+            <input type="search" name="keyword-search" class="form-control" id="keyword-search">
+            <button type="button" class="btn btn-primary" id="keyword-btn">Search</button>
+          </div>
+          <div class="form-group">
+            <label for="location-search">Search by location</label>
+            <label for="latitude">Latitude</label>
+            <input type="search" name="latitude" class="form-control" id="latitude">
+            <label for="longitude">Longitude</label>
+            <input type="search" name="longitude" class="form-control" id="longitude">
+            <button type="button" class="btn btn-primary" id="location-btn">Search</button>
+          </div>
+          <div class="form-group">
+            <label for="interesting-search">Today's most interesting photos</label>
+            <button type="button" class="btn btn-primary" id="interesting-btn">Show</button>
+          </div>
 
         </div>
+
+      <div id="info"></div>
+
+      <div id="photos">
+
       </div>
 
-      <ul id="photos">
 
-      </ul>
-    </div>
-  </div>
-</div>
-
-      <h3></h3>
-      <div id="player"></div>
-      <button id="start"></button>
 
     </main>
-
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
