@@ -1,10 +1,12 @@
+<!-- Created by Stina Sköld -->
+
 <html>
   <head>
     <meta charset="utf-8">
     <title>Photo Search</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,700italic,400italic,300italic,100italic,900,700,300,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 
   </head>
 
@@ -14,18 +16,18 @@
 
     <main class="container-fluid row row-centered text-center">
 
-      <h1>Photo search</h1>
+      <h1>Photo Search</h1>
 
         <div class="container-fluid row row-centered text-center search-div">
 
           <div class="form-group keyword col-lg-4">
 
-            <div id="info"></div>
+
 
             <label for="keyword-search">Search by keyword</label>
             <p>Type one or several keywords, separated by comma</p>
             <input type="search" name="keyword-search" class="form-control" id="keyword-search">
-            <button type="button" class="btn btn-primary" id="keyword-btn">Search</button>
+            <button type="button" class="btn" id="keyword-btn">Search</button>
           </div>
 
           <div class="form-group location col-lg-4">
@@ -37,27 +39,22 @@
             <label for="longitude" class="small">Longitude</label>
             <p>Example: 16.192421</p>
             <input type="search" name="longitude" class="form-control" id="longitude">
-            <button type="button" class="btn btn-primary" id="location-btn">Search</button>
+            <button type="button" class="btn" id="location-btn">Search</button>
 
           </div>
 
           <div class="form-group interesting col-lg-4">
 
             <label for="interesting-search">Today's most interesting photos</label><br>
-            <button type="button" class="btn btn-primary" id="interesting-btn">Show</button>
+            <button type="button" class="btn" id="interesting-btn">Show</button>
 
           </div>
         </div>
-
-
-
       <div id="photos">
-
       </div>
-
-
-
     </main>
+    <footer class="text-center row row-centered"><p>Stina Sköld, 2016</p></footer>
+
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/main.js"></script>
   </body>
