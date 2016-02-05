@@ -13,7 +13,7 @@ function displayPhotos(data) {
   $.each(data.photos.photo,function(i,photo) {
     photoURL = 'https://farm' + photo.farm +'.staticflickr.com/' + photo.server +'/' + photo.id + '_' + photo.secret;
     html += '<li>';
-    html += '<a href="' + photoURL + '_b.jpg">';
+    html += '<a href="' + photoURL + '_b.jpg" target="_blank">';
     html += '<img src="' + photoURL + '_n.jpg"></a></li>';
   });
   html += '</ul>';
