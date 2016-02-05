@@ -1,0 +1,77 @@
+body {
+  background: #222;
+}
+
+body, main .container-fluid, .row {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.form-group {
+  padding-right: 8%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.interesting {
+  padding-right: 0;
+}
+
+.keyword {
+  padding-left: 8%;
+}
+
+.location {
+  padding-left: 8%;
+}
+
+/* centered columns styles */
+.row-centered {
+    margin: 0 auto;
+}
+
+.search-div {
+  background-color: #ccc;
+  margin: 0;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+h1 {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
+  background-color: #222;
+  width: 100%;
+}
+
+ul {
+  background-color: #222;
+  margin: 0;
+  padding-top: 30px;
+}
+
+
+li {
+  display: inline;
+}
+
+img {
+  padding: 10px;
+  background-color: #222;
+}
+
+button {
+  margin-top: 10px;
+}
+
+label {
+  font-size: 1.5em;
+}
+
+.small {
+  font-size: 1em;
+  margin-top: 10px;
+}

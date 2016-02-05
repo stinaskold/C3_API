@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Font game</title>
+    <title>Photo Search</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900italic,700italic,400italic,300italic,100italic,900,700,300,100' rel='stylesheet' type='text/css'>
@@ -10,18 +10,55 @@
 
   <body>
 
-    <h1 class="text-center"></h1>
 
-    <main class="container row row-centered text-center">
 
-      <h3></h3>
+    <main class="container-fluid row row-centered text-center">
 
-      <button id="start"></button>
+      <h1>Photo search</h1>
+
+        <div class="container-fluid row row-centered text-center search-div">
+
+          <div class="form-group keyword col-lg-4">
+
+            <div id="info"></div>
+
+            <label for="keyword-search">Search by keyword</label>
+            <p>Type one or several keywords, separated by comma</p>
+            <input type="search" name="keyword-search" class="form-control" id="keyword-search">
+            <button type="button" class="btn btn-primary" id="keyword-btn">Search</button>
+          </div>
+
+          <div class="form-group location col-lg-4">
+
+            <label for="location-search">Search by location</label><br>
+            <label for="latitude" class="small">Latitude</label>
+            <p>Example: 58.587745</p>
+            <input type="search" name="latitude" class="form-control" id="latitude">
+            <label for="longitude" class="small">Longitude</label>
+            <p>Example: 16.192421</p>
+            <input type="search" name="longitude" class="form-control" id="longitude">
+            <button type="button" class="btn btn-primary" id="location-btn">Search</button>
+
+          </div>
+
+          <div class="form-group interesting col-lg-4">
+
+            <label for="interesting-search">Today's most interesting photos</label><br>
+            <button type="button" class="btn btn-primary" id="interesting-btn">Show</button>
+
+          </div>
+        </div>
+
+
+
+      <div id="photos">
+
+      </div>
+
+
 
     </main>
-
     <script src="js/jquery-1.11.3.js"></script>
-    <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
