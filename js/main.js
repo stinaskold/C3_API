@@ -1,5 +1,9 @@
+var apikey = 'b9710296a6cb141241e13573ccd47bc2';
+
+
+
 $("#keyword-btn").click(function() {
-    // $("info").html('<p>Processing search...</p>');
+    $("#info").html('<p>Processing search...</p>');
     var keywords = $("#keyword-search").val();
     console.log(keywords);
 
@@ -7,39 +11,61 @@ $("#keyword-btn").click(function() {
     console.log(url);
 
     $.getJSON(url, function(data) {
-      console.log(data.photos.photo);
-      var html = '<ul>';
-      $.each(data.photos.photo,function(i,photo) {
-        html += '<li>';
-        // html += '<a href="' + photo.link + '" class="image">';
-        html += '<img src="' + 'https://farm' + photo.farm +'.staticflickr.com/' + photo.server +'/' + photo.id + '_' + photo.secret + '_n.jpg"></a></li>';
-      });
-      html += '</ul>';
-      $('#photos').html(html);
-    });
+     console.log(data.photos.photo);
+     var html = '<ul>';
+     $.each(data.photos.photo,function(i,photo) {
+       html += '<li>';
+       // html += '<a href="' + photo.link + '" class="image">';
+       html += '<img src="' + 'https://farm' + photo.farm +'.staticflickr.com/' + photo.server +'/' + photo.id + '_' + photo.secret + '_n.jpg"></a></li>';
+     });
+     html += '</ul>';
+     $('#photos').html(html);
+     $("#info").html('<p>Your search is completed.</p>');
+   });
 
 });
 
 
-$("#location-btn").click(function() {
 
+$("#location-btn").click(function() {
+    $("#info").html('<p>Processing search...</p>');
     var latitude = $("#latitude").val();
     var longitude = $("#longitude").val();
     console.log(latitude + " " + longitude);
 
-    var url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=b9710296a6cb141241e13573ccd47bc2&lat=' + latitude + '&lon=' + longitude + '&sort=interestingness-desc&jsoncallback=?';
+    var url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&format=json&api_key=' + apikey + '&lat=' + latitude + '&lon=' + longitude + '&sort=interestingness-desc&jsoncallback=?';
     console.log(url);
 
-    $.getJSON(url, function(data) {
-      var html = '<ul>';
-      $.each(data.photos.photo,function(i,photo) {
-        html += '<li>';
-        // html += '<a href="' + photo.link + '" class="image">';
-        html += '<img src="' + 'https://farm' + photo.farm +'.staticflickr.com/' + photo.server +'/' + photo.id + '_' + photo.secret + '_n.jpg"></a></li>';
-      });
-      html += '</ul>';
-      $('#photos').html(html);
-    });
+    $.ajax({
+      url: url,
+      error: function() {
+         $('#info').html('<p>An error has occurred</p>');
+      },
+      dataType: 'jsonp',
+      success: function(data) {
+        var html = '<ul>';
+          $.each(data.photos.photo,function(i,photo) {
+            html += '<li>';
+            // html += '<a href="' + photo.link + '" class="image">';
+            html += '<img src="' + 'https://farm' + photo.farm +'.staticflickr.com/' + photo.server +'/' + photo.id + '_' + photo.secret + '_n.jpg"></a></li>';
+          });
+          html += '</ul>';
+          $('#photos').html(html);
+          $('#info').html('<p>Your search is completed.</p>');
+      },
+      type: 'GET'
+   });
+
+    // $.getJSON(url, function(data) {
+    //   var html = '<ul>';
+    //   $.each(data.photos.photo,function(i,photo) {
+    //     html += '<li>';
+    //     // html += '<a href="' + photo.link + '" class="image">';
+    //     html += '<img src="' + 'https://farm' + photo.farm +'.staticflickr.com/' + photo.server +'/' + photo.id + '_' + photo.secret + '_n.jpg"></a></li>';
+    //   });
+    //   html += '</ul>';
+    //   $('#photos').html(html);
+    // });
 
 });
 

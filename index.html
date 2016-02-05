@@ -16,29 +16,40 @@
 
       <h1>Photo search</h1>
 
-        <div class="container">
+        <div class="container-fluid row row-centered text-center search-div">
 
-          <div class="form-group">
+          <div class="form-group keyword col-lg-4">
+
+            <div id="info"></div>
+
             <label for="keyword-search">Search by keyword</label>
+            <p>Type one or several keywords, separated by comma</p>
             <input type="search" name="keyword-search" class="form-control" id="keyword-search">
             <button type="button" class="btn btn-primary" id="keyword-btn">Search</button>
           </div>
-          <div class="form-group">
-            <label for="location-search">Search by location</label>
-            <label for="latitude">Latitude</label>
+
+          <div class="form-group location col-lg-4">
+
+            <label for="location-search">Search by location</label><br>
+            <label for="latitude" class="small">Latitude</label>
+            <p>Example: 58.587745</p>
             <input type="search" name="latitude" class="form-control" id="latitude">
-            <label for="longitude">Longitude</label>
+            <label for="longitude" class="small">Longitude</label>
+            <p>Example: 16.192421</p>
             <input type="search" name="longitude" class="form-control" id="longitude">
             <button type="button" class="btn btn-primary" id="location-btn">Search</button>
-          </div>
-          <div class="form-group">
-            <label for="interesting-search">Today's most interesting photos</label>
-            <button type="button" class="btn btn-primary" id="interesting-btn">Show</button>
+
           </div>
 
+          <div class="form-group interesting col-lg-4">
+
+            <label for="interesting-search">Today's most interesting photos</label><br>
+            <button type="button" class="btn btn-primary" id="interesting-btn">Show</button>
+
+          </div>
         </div>
 
-      <div id="info"></div>
+
 
       <div id="photos">
 
